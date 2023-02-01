@@ -26,7 +26,7 @@ body {
   margin-top: -7px;
 }
 .brand span {
-  color: aqua;
+  color: aquamarine;
 }
 .menu {
   display: flex;
@@ -44,18 +44,19 @@ body {
 }
 
 .menu li:hover a{
-  background-color: aqua;
-  color: #191c32;
+  background-color: aquamarine;
+  color: black;
 }
 
 .menu .active {
-  color: aqua;
+  color: black;
  
 }
 
 
 .menu li a:hover {/*hover establecer un segundo estado a cualquier elemento*/
   color: #66E7C8;
+  text-decoration: black;
 }
 
 
@@ -131,7 +132,7 @@ h1{
 }
 .download-cv:hover{
     background-color: white;
-    box-shadow: none;;
+    box-shadow: none;
 }
 .main img{
     width: 500px;
@@ -140,57 +141,78 @@ h1{
     justify-content: space-between;
 }
 /*About*/
-.about{
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    width: 100vw;
-    align-items: center;
+.about {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100vw;
+  align-items: center;
 }
-.about img{
-    width: 550px;
-    grid-column: 1/5;
+
+.about img {
+  width: 100%;
+  grid-column: 1/5;
 }
-.about-info{
-    grid-column: 5/10;
-    padding: 2em;
-    color: black;
+
+.about-info {
+  grid-column: 5/10;
+  padding: 3em;
+  color: black;
 }
-.about-info h2{
-    font-size: 2em;
-    color: #191c32;
+
+.about-info h2 {
+  font-size: 2em;
+  color: #191c32;
 }
-.divider{
-    height: 4px;
-    width: 60px;
-    background-color: aquamarine;
-    margin-top: 5px;   
+
+.divider {
+  height: 4px;
+  width: 60px;
+  background-color: aqua;
+  margin-top: 5px;
+  margin-bottom: 2em;
 }
-.about p{
-    margin-bottom: 1em;
+
+.about p {
+  margin-bottom: 1em;
 }
-/*Portafolio*/
-.portfolio-headings{
-    width: 100vw;
-    padding: 5em;
+
+/*Portafolio-----------------------------------------------------------------*/
+.portfolio, .contact-section {
+  width: 100vw;
+  background-color: #191c32;
+  color: #fff;
 }
-.portfolio-headings h2{
-    font-size: 2.5em;
+
+.portfolio-heading {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3em;
+
 }
-.portfolio .container{
-    width: 80vw;
-    height: 80vh;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;;
+.portfolio-heading h2, .contact-heading h2 {
+  font-size: 2.5em;
+  color: #fff;
 }
-.cart{
-    width: 300px;
-    background-color: aqua;
-    
+
+.portfolio .container {
+  width: 80vw;
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.card {
+  width: 300px;
+  background-color: #2b3058;
+  margin: 1em;
+} 
+
 .card_img{
-    width: 100%;
+    width: 300px;
     height: 150px;
     background-image: url(image/2-original.png);
     background-size: cover;
@@ -221,7 +243,7 @@ h1{
 .card .project-details a{
     text-decoration: none;
     color: #191c32;
-    text-transform: uppercase;;
+   text-transform: uppercase;;
 
 }
 .proyect-details-content{
@@ -230,3 +252,91 @@ h1{
     justify-content: center;
     margin-top: 1em;
 }
+.card .project-details a{
+  text-decoration: none;
+  color: #191c32;
+}
+/*Contact----------------------------------------------------------------------------*/
+.contact-section {
+  padding: 3em;
+  justify-content: space-between;
+}
+
+.contact-section {
+  padding: 3em;
+}
+
+.container-contact {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.contact-section img {
+  width: 750px;
+  height: 700px;
+  bottom: 0px;
+  opacity: .2;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin-top: 2em;
+}
+.form input{
+  padding: 10px 15px;
+  margin-bottom: 1em;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;;
+}
+.form textarea {
+  height: 150px;
+  background: none;
+  padding: 1.5em;
+  color: white;
+  border-bottom: 1px solid white;
+}
+.btn-submit{
+    padding: 10px 20px;/*recubre el texto con un tamaño especificado*/
+    background-color: aquamarine;
+    border: none;
+    text-transform: uppercase;/*modifica el texto*/
+    border-radius: 20px;/*manejo de los bordes */
+    margin-top: 10px; /*hace que se aleje o acerque*/
+    cursor: pointer;/*cambia el cursor al pasar por el item*/
+    box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .63);/*sombreado*/
+}
+.btn-submit:hover{
+    background-color: white;
+    box-shadow: none;
+}
+.footer{
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 200px;
+  background-color: aquamarine;
+}
+.footer-content h2{
+  font-size: 3em;
+}
+.footer-content h5{
+font-size:  1.5em;
+}
+.footer-content h3{
+font-size: 1em;
+}
+
+.social-network{
+  display: flex;
+  justify-content: space-evenly;/*espacios equitativos*/
+  width: 200px;
+  margin-top: 1em;
+
+}
+
