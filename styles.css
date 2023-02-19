@@ -13,7 +13,7 @@ body {
 
 .wrapper , .portfolio{
   width: 100vw;
-  height: 100vh;
+
   background-color: #191c32;
   color: #fff;
 }
@@ -53,10 +53,16 @@ body {
  
 }
 
-
 .menu li a:hover {/*hover establecer un segundo estado a cualquier elemento*/
   color: #66E7C8;
   text-decoration: black;
+}
+
+.toggle-menu, 
+.info-content_subtitle, 
+.info-content .social-network{
+  display: none;
+
 }
 
 
@@ -71,7 +77,7 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: clamp(4em, 1.5em, 3em);/*un valor mínimo, un valor preferido y un valor máximo permitido.*/
 }
 
 .info-content span {
@@ -99,7 +105,7 @@ h1 {
   border:  7px solid aqua;
   width: 350px;
   height: 520px;
-  z-index: 1;
+  min-height: 300px;
 }
 */
 
@@ -113,6 +119,13 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
     align-items:center;/*centra todos lo items*/
  
+}
+
+.main img{
+  width: 500px;
+  border: 7px solid aquamarine;
+  height: 500px;
+  justify-content: space-between;
 }
 
 h1{
@@ -134,18 +147,14 @@ h1{
     background-color: white;
     box-shadow: none;
 }
-.main img{
-    width: 500px;
-    border: 7px solid aquamarine;
-    height: 500px;
-    justify-content: space-between;
-}
+
 /*About*/
 .about {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   width: 100vw;
   align-items: center;
+  color: white;
 }
 
 .about img {
@@ -156,12 +165,12 @@ h1{
 .about-info {
   grid-column: 5/10;
   padding: 3em;
-  color: black;
+  color:white;;
 }
 
 .about-info h2 {
   font-size: 2em;
-  color: #191c32;
+  color: white;
 }
 
 .divider {
@@ -188,7 +197,6 @@ h1{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3em;
 
 }
 .portfolio-heading h2, .contact-heading h2 {
@@ -198,11 +206,12 @@ h1{
 
 .portfolio .container {
   width: 80vw;
-  height: 80vh;
+  height: auto;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -260,6 +269,10 @@ h1{
 .contact-section {
   padding: 3em;
   justify-content: space-between;
+  background-image: url("image/contact.png");
+  background-size: contain ;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .contact-section {
@@ -273,8 +286,9 @@ h1{
 }
 
 .contact-section img {
-  width: 750px;
-  height: 700px;
+
+  width: 450px;
+  height: 400px;
   bottom: 0px;
   opacity: .2;
 }
@@ -283,6 +297,7 @@ h1{
   flex-direction: column;
   width: 30vw;
   margin-top: 2em;
+  width: 100%;
 }
 .form input{
   padding: 10px 15px;
@@ -293,7 +308,7 @@ h1{
 }
 .form textarea {
   height: 150px;
-  background: none;
+  background-color: #2b3058;
   padding: 1.5em;
   color: white;
   border-bottom: 1px solid white;
@@ -339,4 +354,96 @@ font-size: 1em;
   margin-top: 1em;
 
 }
+ @media screen and (max-width:800px){
 
+    .menu {
+      flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #2b3058;
+    z-index: 1;
+    transform: translateX(-110%);
+    transition: all .5s ease-in-out;
+    }
+  
+    .show-menu {
+      transform: translateX(0%);
+      transition: all .5s ease-in-out;
+    }
+  
+    .menu li {
+      margin: 2em;
+    }
+  
+    .toggle-menu {
+      display: block;
+    }
+  
+    .fa-bars {
+      font-size: 1.5em;
+      margin-top: -.2em;
+    }
+  
+    .toggle-menu .fa-close {
+      font-size: 1.7em;
+      display: none;
+    } 
+  
+  /*------------------------------------------------------------------------------*/
+  .main, .about {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .main img {
+    width: min(70%, 350px);
+    height: auto;
+  }
+
+  .info-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-content .sotial-networks,
+  .info-content_subtitle {
+    display: block;
+    margin-top: .5em;
+  }
+  .info-content_subtitle{
+    margin-top: .5em;
+  }
+
+  .info-content_subtitle {
+    margin-bottom: .5em;
+  }
+
+  .info-content .sotial-networks{
+   display: flex;
+   justify-items: space-evenly;
+
+  }
+
+  .download-cv,
+  .info-content_p,
+  .contact-section_img {
+    display: none;
+  }
+
+  .about img{
+      height: 250px;
+      width: auto;
+  }
+  .form-group {
+    width: 80vw;
+
+  }
+
+  /*----------------*/
+
+}

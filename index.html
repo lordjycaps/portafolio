@@ -16,19 +16,28 @@
             <div class="brand">
               <h2>J <span>R</span></h2>
             </div>
-            <ul class="menu">
+            <ul class="menu" id="menu">
               <li class="active"><a href="#"><b>Home</b></a></li>
               <li><a href="#about"><b>About me</b> </a></li>
               <li><a href="#portafolio"><b>Portafolio</b></a></li>
               <li><a href="#contacto"><b>Contact</b></a></li>
             </ul>
+            <div class="toggle-menu">
+              <i class="fas fa-bars" id="toggle_open"></i>
+              <i class="fas fa-close" id="toggle_close"></i>
+            </div>
           </nav>
         </header>   
     <main class="main">
         <div class="info-content">
-
+          <span class="info-content_subtitle">Frontend Developer</span>
           <h1>I'm <span>Juan</span>Ruiz</h1>
-          <p>
+            <div class="sotial-networks">
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-linkedin"></i>
+              <i class="fab fa-github"></i>
+            </div>
+          <p class="info-content_p">
             Systems engineering student, telecommunications technologist, electric technician
           </p>
           <a download href="Doc/Hoja de Vida_JuanRuiz.pdf"><button class="download-cv">Download CV</button></a>
@@ -41,8 +50,12 @@
         <div class="about-info">
           <h2>About me</h2>
           <div class="divider"></div>
-          <p><b>Estudiante de ingeniería de sistemas de Sexto semestre, tecnólogo en telecomunicaciones, técnico en instalaciones eléctricas residenciales con experiencia laboral en áreas administrativas y técnicas, conocimientos básicos en programación y desarrollo web 
-            persona con competencias laborales de capacidad de liderazgo, trabajo en equipo, recursividad, creatividad y comunicación, con ganas de seguir adquiriendo nuevos conocimientos para un mejor desempeño laboral y profesional.</b> </p>
+          <p><b>Estudiante de ingeniería de sistemas, tecnólogo en telecomunicaciones,
+            técnico en instalaciones eléctricas residenciales con experiencia laboral en
+            áreas administrativas y técnicas, conocimientos básicos en programación y
+            desarrollo web, trabajo de programación en equipo, persona con
+            competencias laborales de capacidad de liderazgo, trabajo en equipo,
+            recursividad, creatividad y comunicación, con ganas de seguir adquir</b> </p>
           <button class="download-cv">Read more</button>
         </div>
       </div>
@@ -124,13 +137,13 @@
         </div>
         </div>
       </div>
+      
       <div class="contact-section" id="contacto">
         <div class="contact-heading">
           <h2>Keep in touch</h2>
           <div class="divider"></div>
         </div>
         <div class="container-contact">
-          <img src="image/contact.png" alt="decorative-picture">
           <div class="contact-form">
             <h4>Send me a message...</h4>
             <form class="form">
@@ -142,6 +155,8 @@
           </div>
         </div>
       </div>
+
+
       <footer class="footer">
         <div class="footer-content">
           <h2>Juan Ruiz</h2>
@@ -155,5 +170,6 @@
           <i class="fa-brands fa-github"></i>
         </div>
       </footer>
+      <script src="scripts.j"></script>
   </body>
 </html>
